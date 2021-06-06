@@ -684,6 +684,7 @@ body {
   height: 18px;
 }
 .modal-w-close:hover {
+  transition: fill var(--transition-start-time) var(--cubic-bezier);
   fill: var(--accent-color);
 }
 .modal-form {
