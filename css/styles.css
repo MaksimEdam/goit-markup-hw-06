@@ -429,10 +429,12 @@ body {
 .footer-phone {
   color: var(--footer-mail-phone);
 }
-.footer-social {
+.footer-social,
+.footer-form {
   padding-top: 72px;
   padding-bottom: 100px;
 }
+
 .footer-social-title {
   font-family: Roboto;
   font-weight: 700;
@@ -442,6 +444,9 @@ body {
   text-transform: uppercase;
   color: var(--title-text-color-footer);
   margin-bottom: 20px;
+}
+.footer-social:not(:last-child) {
+  margin-right: 93px;
 }
 .footeer-social-list-icon {
   width: 20px;
@@ -472,6 +477,58 @@ body {
 .footeer-social-list-link:hover .footeer-social-list-icon,
 .footeer-social-list-link:focus .footeer-social-list-icon {
   fill: var(--title-text-color-footer);
+}
+.footer-form-message {
+  width: 358px;
+  padding: 15px 16px;
+  background-color: var(--background-hero-footer);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: var(--title-text-color-footer);
+  margin-right: 12px;
+}
+.footer-form-btn {
+  align-self: center;
+  border-radius: 4px;
+  border: 0;
+  background-color: var(--accent-color);
+  color: var(--title-text-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  padding: 10px 29px;
+  transition: background-color var(--transition-start-time) var(--cubic-bezier),
+    color var(--transition-start-time) var(--cubic-bezier);
+}
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: var(--button-hover-focus);
+  color: var(--title-text-color-footer);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.modal-form-policy-link {
+  color: #188ce8;
+}
+.footer-form-message::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-form-btn::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/svg/icon-send.svg);
+  margin-left: 10px;
+  background-size: contain;
 }
 /*==================================Конец "нижний колонтитул"=======================*/
 
@@ -642,7 +699,15 @@ body {
   margin-bottom: 12px;
 }
 .modal-form-field {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
   margin-bottom: 10px;
+}
+.modal-form-textarea {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 }
 .modal-form-input-wrapper {
   position: relative;
@@ -697,19 +762,24 @@ body {
   vertical-align: middle;
   width: 16px;
   height: 15px;
-  border: 1px solid #212121;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border: 2px solid #212121;
   border-radius: 2px;
+  margin-right: 7px;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .modal-form-checkbox:checked + .modal-form-checkbox-policy::before {
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='16' height='15' rx='2' fill='%232196F3'/%3E%3Cpath d='M3.957 7.752l-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422z' fill='%23fff' stroke='%23fff' stroke-width='.2'/%3E%3C/svg%3E");
+  background-image: url(../images/svg/Vector.svg);
   border-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 .modal-form-checkbox-policy {
   font-size: 14px;
   line-height: 1.71px;
   color: #757575;
-  margin-bottom: 10px;
+  margin-top: 20px;
   display: inline-block;
 }
 .modal-form-btn {
@@ -733,6 +803,7 @@ body {
 .modal-form-btn:focus {
   background-color: var(--button-hover-focus);
   color: var(--title-text-color-footer);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .modal-form-policy-link {
   color: #188ce8;
