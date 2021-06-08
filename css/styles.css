@@ -774,6 +774,9 @@ body {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
 }
+.modal-form-checkbox:focus + .modal-form-checkbox-policy::before {
+  border-color: var(--accent-color);
+}
 .modal-form-checkbox-policy {
   font-size: 14px;
   line-height: 1.71px;
